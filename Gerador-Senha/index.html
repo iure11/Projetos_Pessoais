@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senha</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/jAlertWifi.css">
+    
+</head>
+
+<body>
+  
+    <p>Gerador de senha</p>
+
+    <div class="container">
+        <span>Tamanho <span id="caracteres"></span> caracteres</span>
+        <input id="slider" class="slider" type="range" min="8" max="30" value="18.5"/>
+        <button id="button" class="button-gs" onclick="generatePassword()">Gerar Senha</button>
+    </div>
+
+    <div id="pwdContainer" onclick="copyPassword()" class="container-pwd hide">
+        <span class="title">Sua Senha gerada foi:</span>
+        <span id="pwd" class="pwd"></span>
+        <span class="copiar"> Clique na senha para copiar!</span>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/jAlertWifi.js"></script>
+    
+</body>
+</html>
