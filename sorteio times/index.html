@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorteio de Times</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Sorteio de Times</h2>
+
+        <div class="input-group">
+            <label for="jogadores">Jogadores (um por linha):</label>
+            <textarea id="jogadores" class="fixed-size-textarea">A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+A9
+A10
+A11
+A12
+A13
+A14</textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="cabecasDeChave">Cabeças de Chave (um por linha):</label>
+            <textarea id="cabecasDeChave" class="fixed-size-textarea">A4
+A5
+A8</textarea>
+        </div>
+
+        <button onclick="sortearTimes()">Sortear Times</button>
+
+        <div class="times">
+            <div class="time" id="time1"><h3>Time 1</h3></div>
+            <div class="time" id="time2"><h3>Time 2</h3></div>
+            <div class="time" id="time3"><h3>Time 3</h3></div>
+        </div>
+    </div>
+
+    <script src="sorteio.js"></script>
+</body>
+</html>
