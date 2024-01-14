@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oi </title>
+    <link rel="stylesheet" href="jAlertWifi.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff; /* Cor do texto */
+        }
+
+        body {
+            background-color: #ffccd5; /* Cor de fundo suave */
+            font-family: 'Arial', sans-serif; /* Fonte moderna e legível */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura total da janela */
+        }
+
+        .container {
+            text-align: center; /* Centraliza o conteúdo do container */
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #d63384; /* Cor do título */
+            margin-bottom: 20px; /* Espaçamento abaixo do título */
+        }
+
+        button {
+            background-color: #560027; /* Cor de fundo escura para botões */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            margin: 10px; /* Espaçamento entre os botões */
+        }
+
+        button:hover {
+            background-color: #880e4f; /* Cor ao passar o mouse */
+        }
+
+        #move-button  {
+            position: absolute;
+            left: 60%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+        }
+
+        #confirma {
+            position: absolute;
+            left: 40%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Tamanho menor para telas pequenas */
+            }
+            button {
+                font-size: 0.8em; /* Tamanho menor para botões em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Quer sair cmg?</h1>
+    <button id="confirma" onclick="confirma()">Sim</button>
+    <button id="move-button" onclick="moveButton()"onmouseover="moveButton()">Não</button>
+</div>
+<script>
+    function moveButton() {
+        var button = document.getElementById('move-button');
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var buttonWidth = button.offsetWidth;
+        var buttonHeight = button.offsetHeight;
+        var newLeft = Math.floor(Math.random() * (windowWidth - buttonWidth));
+        var newTop = Math.floor(Math.random() * (windowHeight - buttonHeight));
+        button.style.left = newLeft + 'px';
+        button.style.top = newTop + 'px';
+    }
+
+    function confirma() {
+        alertWifi("<span class='special-text'>♥♥♥♥</span>");
+    }
+</script>
+<script src="./jAlertWifi.js"></script>
+</body>
+</html>
