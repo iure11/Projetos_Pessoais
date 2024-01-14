@@ -1,10 +1,4 @@
-// ----------------------------------------------------------------------------------------
-// Biblioteca: jAlertWifi.js
-// Criado por Wilton de Paula Filho
-// Data: 04/22/2021
-// Dependencias: jQuery library (CDN), jAlertWifi.css (importação para o projeto)
-// Objetivo: Apresentar um alert() personalizado, a partir de um painel utilizando jQuery
-// ----------------------------------------------------------------------------------------
+
 
 var script = document.createElement('script');
 script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js';
@@ -16,19 +10,7 @@ style.href = "/jAlertWifi.css";
 style.rel = "stylesheet";
 document.getElementsByTagName('head')[0].appendChild(style);
 
-// ----------------------------------------------------------------------------------------
-// Abre uma painel fullscreen para exibir mensagens de alerta para o usuário
-// Parâmetros:
-// - $txt: mensagem a ser exibida no painel ("": exibe $countTimer ou "txt da mensagem")
-// - $hasTimer: 
-//   * true (apresenta um contador regressivo no painel ao inves da combinação "mensagem + btn")
-//   * false (não apresenta um contador, mas sim um $txt + btn)
-// - $countTimer: valor inicial do contador regressivo, caso $hasTimer for true
-// - $srcImg: caminho + nome da imagem a ser exibida no painel de informações
-// - $fontSize: tamanho da fonte do texto
-// Exemplos:
-//  showPanelInfo("",true,3,"","100"): exibe o painel de informacoes com o texto inicialmente em 3 até chegar 0 e depois o painel desaparece
-//  showPanelInfo("Fim de jogo",false,0,"img/imagem.gif","200"): exibe o painel com a msg "Fim de jogo" com um btn para fechar a janela
+
 
 function alertWifi($txt, $hasTimer, $countTimer, $srcImg, $fontSize) {
     let $panelInfo = $(`<div></div>`).addClass("panelInfo");
